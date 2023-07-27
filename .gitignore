@@ -1,0 +1,41 @@
+# Arquivos gerados automaticamente
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Arquivos de configuração pessoal
+.env
+venv/
+.idea/
+
+# Arquivos de compilação e cache
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Outros
+*.log
+*.swp
+*.swo
+*.tmp
+*.bak
+*.pyc
+*.pyo
+*.pyd
