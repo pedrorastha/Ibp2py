@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 
 setup(
     name='Ibp2py',
-    version='1.0.0',
+    version='1.0.1',
     author='Pedro Rastha',
     author_email='pedrorastha@gmail.com',
     description='SAP Data Retrieval and Processing Library for IBP',
     long_description='A Python library to fetch and process data from SAP IBP.',
     long_description_content_type='text/markdown',
-    url='https://github.com/pedrorastha/ibpy',
+    url='https://github.com/pedrorastha/ibp2py',
     packages=find_packages(),
     install_requires=[
         'requests>=2.28.1',

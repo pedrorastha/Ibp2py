@@ -99,7 +99,7 @@ class Ibp2py:
         self.base_url = self.default_base_url 
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(logging.INFO)
-    
+
     # Define a decorator for logging function calls
     def log_function_call(func):
         """
@@ -500,4 +500,4 @@ class Ibp2py:
         Returns:
         response (Response): The response from the server after posting the data.
         """
-     
+        pass
