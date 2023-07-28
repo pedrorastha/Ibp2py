@@ -54,7 +54,7 @@ import logging
 # Set up logging with a basic configuration
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-class Ibp2py:
+class ibp2py:
     """
     A class used to interact with SAP IBP.
 
@@ -164,7 +164,7 @@ class Ibp2py:
 
         try:
             response = requests.get(url, params=params, headers=headers, auth=HTTPBasicAuth(self.username, self.password))
-            response.raise_for_status()
+            #response.raise_for_status()
         except requests.exceptions.RequestException as e:
             self.logger.error(f"Failed to send GET request to {url}: {e}")
             raise
