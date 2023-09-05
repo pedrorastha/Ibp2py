@@ -7,7 +7,7 @@ This is a Python library designed to make it easier to interact with the SAP Int
 You can install ibpy using pip:
 
 ```bash
-`pip install ibpy
+pip install ibpy2py
 ```
 ## Usage
 
@@ -24,6 +24,8 @@ connection = Ibp2py(username, password, host)
 ### Extracting Master Data
 
 Here is an example of how to extract master data:
+Method -> MASTER_DATA_API_SRV
+
 
 ```python
 PlanningAreaID = 'SAP01' 
@@ -36,13 +38,22 @@ data = connection.masterdata(MasterDataTypeID, select=select, PlanningAreaID=Pla
 ```
 
 ### Extracting Telemetry Data
+Method -> *AddInLogon* (MtrgActyExcelAddInLogon)
+Method -> *AddInLogon* (MtrgActyExcelAddInPlanningView)
+
+module -> Method
+
 
 Here is an example of how to extract telemetry data:
 
 ```python
-data = connection.telemetry('PlanningView')
+data = connection.telemetry('PlanningView', module)
 ```
 ### Extracting Key Figure Data
+Method -> 1 (PLANNING_DATA_API_SRV)
+Method -> 2 (EXTRACT_ODATA_SRV)
+
+modulo -> Method
 
 Here is an example of how to extract key figure data:
 
@@ -51,11 +62,11 @@ filters="(PERIODID0_TSTAMP ge datetime'2023-04-01T00:00:00' and PERIODID0_TSTAMP
 PlanningAreaID = 'SAP01' 
 MasterData = 'PRDID,CUSTID' 
 KeyFigures = 'CONSENSUSDEMAND' 
-data = connection.keyfigure(PlanningAreaID, MasterData, KeyFigures,filters=filters)
+data = connection.keyfigure(PlanningAreaID, MasterData, KeyFigures,modulo = modulo,filters=filters)
 ```
 ## Contact Information
 
-For any issues or queries related to ibpy, feel free to reach out:
+For any issues or queries related to ibpy2py, feel free to reach out:
 
 - Author: Pedro Rastha
 - Email: [pedrorastha@gmail.com](mailto:pedrorastha@gmail.com)
